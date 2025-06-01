@@ -1,0 +1,68 @@
+Clear
+New Circuit.IEEE14 basekV=69 pu=1.0 phases=3 bus1=BUS1
+set frequency=60
+
+New Vsource.Slack bus1=Bus1.1.2.3  basekV=69.000  phases=3  angle=0  pu=1.06  phases=3 baseMVA=100 MVAsc3=20000 MVAsc1=21000 
+
+Set voltagebases=[69.0, 13.8] // List all nominal kV bases used
+! Define Bus1 at base kV=69.000
+! Define Bus2 at base kV=69.000
+! Define Bus3 at base kV=69.000
+! Define Bus4 at base kV=69.000
+! Define Bus5 at base kV=69.000
+! Define Bus6 at base kV=69.000
+! Define Bus7 at base kV=69.000
+! Define Bus8 at base kV=69.000
+! Define Bus9 at base kV=69.000
+! Define Bus10 at base kV=69.000
+! Define Bus11 at base kV=69.000
+! Define Bus12 at base kV=69.000
+! Define Bus13 at base kV=69.000
+! Define Bus14 at base kV=69.000
+
+New Line.Line1 Bus1=Bus1.1.2.3 Bus2=Bus2.1.2.3 phases=3 R1=0.922682 X1=2.817084 basefreq=60 length=1 units=None
+New Line.Line2 Bus1=Bus1.1.2.3 Bus2=Bus5.1.2.3 phases=3 R1=2.572368 X1=10.618934 basefreq=60 length=1 units=None
+New Line.Line3 Bus1=Bus2.1.2.3 Bus2=Bus3.1.2.3 phases=3 R1=2.237194 X1=9.425352 basefreq=60 length=1 units=None
+New Line.Line4 Bus1=Bus2.1.2.3 Bus2=Bus4.1.2.3 phases=3 R1=2.766617 X1=8.394595 basefreq=60 length=1 units=None
+New Line.Line5 Bus1=Bus2.1.2.3 Bus2=Bus5.1.2.3 phases=3 R1=2.711390 X1=8.278427 basefreq=60 length=1 units=None
+New Line.Line6 Bus1=Bus3.1.2.3 Bus2=Bus4.1.2.3 phases=3 R1=3.190346 X1=8.142738 basefreq=60 length=1 units=None
+New Line.Line7 Bus1=Bus4.1.2.3 Bus2=Bus5.1.2.3 phases=3 R1=0.635594 X1=2.004857 basefreq=60 length=1 units=None
+New Line.Line8 Bus1=Bus4.1.2.3 Bus2=Bus7.1.2.3 phases=3 R1=0.000000 X1=9.956203 basefreq=60 length=1 units=None
+New Line.Line9 Bus1=Bus4.1.2.3 Bus2=Bus9.1.2.3 phases=3 R1=0.000000 X1=26.479730 basefreq=60 length=1 units=None
+New Line.Line10 Bus1=Bus5.1.2.3 Bus2=Bus6.1.2.3 phases=3 R1=0.000000 X1=11.998672 basefreq=60 length=1 units=None
+New Line.Line11 Bus1=Bus6.1.2.3 Bus2=Bus11.1.2.3 phases=3 R1=4.521998 X1=9.469629 basefreq=60 length=1 units=None
+New Line.Line12 Bus1=Bus6.1.2.3 Bus2=Bus12.1.2.3 phases=3 R1=5.851745 X1=12.179114 basefreq=60 length=1 units=None
+New Line.Line13 Bus1=Bus6.1.2.3 Bus2=Bus13.1.2.3 phases=3 R1=3.149402 X1=6.202155 basefreq=60 length=1 units=None
+New Line.Line14 Bus1=Bus7.1.2.3 Bus2=Bus8.1.2.3 phases=3 R1=0.000000 X1=8.386501 basefreq=60 length=1 units=None
+New Line.Line15 Bus1=Bus7.1.2.3 Bus2=Bus9.1.2.3 phases=3 R1=0.000000 X1=5.237576 basefreq=60 length=1 units=None
+New Line.Line16 Bus1=Bus9.1.2.3 Bus2=Bus10.1.2.3 phases=3 R1=1.514474 X1=4.023045 basefreq=60 length=1 units=None
+New Line.Line17 Bus1=Bus9.1.2.3 Bus2=Bus14.1.2.3 phases=3 R1=6.051707 X1=12.872792 basefreq=60 length=1 units=None
+New Line.Line18 Bus1=Bus10.1.2.3 Bus2=Bus11.1.2.3 phases=3 R1=3.906400 X1=9.144453 basefreq=60 length=1 units=None
+New Line.Line19 Bus1=Bus12.1.2.3 Bus2=Bus13.1.2.3 phases=3 R1=10.518001 X1=9.516287 basefreq=60 length=1 units=None
+New Line.Line20 Bus1=Bus13.1.2.3 Bus2=Bus14.1.2.3 phases=3 R1=8.137977 X1=16.569232 basefreq=60 length=1 units=None
+
+! Done lines/transformers
+
+New Load.Load2 bus1=Bus2.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=21700.00 kvar=12700.00 Model=1
+New Load.Load3 bus1=Bus3.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=94200.00 kvar=19000.00 Model=1
+New Load.Load4 bus1=Bus4.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=47800.00 kvar=-3900.00 Model=1
+New Load.Load5 bus1=Bus5.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=7600.00 kvar=1600.00 Model=1
+New Load.Load6 bus1=Bus6.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=11200.00 kvar=7500.00 Model=1
+New Load.Load9 bus1=Bus9.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=29500.00 kvar=16600.00 Model=1
+New Load.Load10 bus1=Bus10.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=9000.00 kvar=5800.00 Model=1
+New Load.Load11 bus1=Bus11.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=3500.00 kvar=1800.00 Model=1
+New Load.Load12 bus1=Bus12.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=6100.00 kvar=1600.00 Model=1
+New Load.Load13 bus1=Bus13.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=13500.00 kvar=5800.00 Model=1
+New Load.Load14 bus1=Bus14.1.2.3  Phases=3 Conn=Delta kV=69.000 kW=14900.00 kvar=5000.00 Model=1
+
+! Done loads
+
+New Generator.gen1 bus1=Bus1.1.2.3 phases=3 kv=69.000 kW=232400.000 pf=1.0
+New Generator.gen2 bus1=Bus2.1.2.3 phases=3 kv=69.000 kW=40000.000 pf=1.0
+New Generator.gen3 bus1=Bus3.1.2.3 phases=3 kv=69.000 kW=0.000 pf=1.0
+New Generator.gen4 bus1=Bus6.1.2.3 phases=3 kv=69.000 kW=0.000 pf=1.0
+New Generator.gen5 bus1=Bus8.1.2.3 phases=3 kv=69.000 kW=0.000 pf=1.0
+
+! Done generators
+Solve
+
